@@ -1,16 +1,9 @@
-FROM php:7.4-fpm-alpine
+FROM php:7-fpm-alpine
 
-RUN apk add --no-cache nginx supervisor wget
+RUN apk add --no-cache nginx supervisor wget gzip certbot certbot-nginx
 
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-
-RUN install-php-extensions gd mysqli pdo_mysql zip mbstring xml swoole intl
-
-# fix work iconv library with alphine
-RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ --allow-untrusted gnu-libiconv
-ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
-
-RUN apk add certbot certbot-nginx
+RUN install-php-extensions gd mysqli pdo_mysql zip mbstring xml intl pcntl swoole
 
 RUN mkdir -p /run/nginx
 
