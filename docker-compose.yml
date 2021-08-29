@@ -1,7 +1,7 @@
 version: '3'
 services:
     laravel:
-        image: 'rc701021/ecommerce-laravel-s:latest'
+        build: .
         restart: always
         ports:
             - '${APP_PORT:-80}:80'
