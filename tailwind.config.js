@@ -15,6 +15,16 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
+        colors: Object.assign({
+            transparent: 'transparent',
+            current: 'currentColor'
+        }, colors)
+    },
+
+    variants: {
+        extend: {
+
+        }
     },
 
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
