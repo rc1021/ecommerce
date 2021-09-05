@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
     mode: 'jit',
@@ -27,5 +28,9 @@ module.exports = {
         }
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography')
+    ],
 };
