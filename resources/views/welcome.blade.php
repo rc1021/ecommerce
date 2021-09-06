@@ -1,6 +1,6 @@
 <x-front-layout>
     <div class="contianer">
-        <div class="max-w-screen-md mx-auto">
+        <div class="max-w-screen-md mx-auto mt-20">
             <div class="text-center text-5xl font-extrabold leading-none tracking-tight">
                 <span
                     class="decoration-clone hover:decoration-slice bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-red-500">

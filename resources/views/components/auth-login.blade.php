@@ -20,7 +20,9 @@
             <div class="mt-4">
                 <div class="flex items-center justify-between">
                     <label for="password" class="block text-sm text-gray-800 dark:text-gray-200">{{ __('Password') }}</label>
-                    <a href="#" class="text-xs text-gray-600 dark:text-gray-400 hover:underline">{{ __('Forgot Your Password?') }}</a>
+                    @if (Route::has('password.request'))
+                        <a href="{{ route('password.request') }}" class="text-xs text-gray-600 dark:text-gray-400 hover:underline">{{ __('Forgot Your Password?') }}</a>
+                    @endif
                 </div>
 
                 <input type="password" name="password" required autocomplete="current-password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
@@ -29,12 +31,12 @@
             <div class="mt-6">
                 <button
                     class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
-                    {{ __('Login') }}
+                    {{ __('Log in') }}
                 </button>
             </div>
         </form>
 
-        <div class="flex items-center justify-between mt-4">
+        {{--  <div class="flex items-center justify-between mt-4">
             <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/5"></span>
 
             <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">{{ __('or') }}{{ __('login with Social Media') }}</a>
@@ -62,11 +64,11 @@
                     </path>
                 </svg>
             </a>
-        </div>
+        </div>  --}}
 
         <p class="mt-8 text-xs font-light text-center text-gray-400">
             <span>{{ __("Don't have an account?") }}</span>
-            <a href="#" class="font-medium text-gray-800 dark:text-gray-200 hover:underline">{{ __('Create One') }}</a>
+            <a href="{{ route('register') }}" class="font-medium text-gray-800 dark:text-gray-200 hover:underline">{{ __('Create One') }}</a>
         </p>
     </div>
 </div>
