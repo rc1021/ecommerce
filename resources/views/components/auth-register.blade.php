@@ -1,6 +1,6 @@
 <div class="flex items-stretch min-h-screen bg-gray-200">
     <div class="self-center w-full max-w-sm p-6 m-auto bg-white rounded-md shadow-md dark:bg-gray-800">
-        <h1 class="text-3xl font-semibold text-center text-gray-700 dark:text-white">Brand</h1>
+        <x-logo />
 
         <x-jet-validation-errors class="mb-4" />
 

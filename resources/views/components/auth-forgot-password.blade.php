@@ -1,6 +1,6 @@
 <div class="flex items-stretch min-h-screen bg-gray-200">
     <div class="self-center w-full max-w-sm p-6 m-auto bg-white rounded-md shadow-md dark:bg-gray-800">
-        <h1 class="text-3xl font-semibold text-center text-gray-700 dark:text-white">Brand</h1>
+        <x-logo />
 
         <div class="mt-4 mb-4 text-sm text-gray-600">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
