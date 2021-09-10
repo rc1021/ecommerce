@@ -1,4 +1,4 @@
-<x-front-layout>
+<x-app-layout>
     <div class="contianer">
         <div class="max-w-screen-md mx-auto mt-20">
             <div class="text-center text-5xl font-extrabold leading-none tracking-tight">
@@ -46,4 +46,4 @@
             </div>
         </div>
     </div>
-</x-front-layout>
+</x-app-layout>
