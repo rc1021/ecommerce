@@ -1437,6 +1437,12 @@ select {
 .gap-1 {
 	gap: 0.25rem;
 }
+.gap-2 {
+	gap: 0.5rem;
+}
+.gap-3 {
+	gap: 0.75rem;
+}
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
 	margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -1626,9 +1632,18 @@ select {
 	-webkit-box-decoration-break: clone;
 	        box-decoration-break: clone;
 }
+.bg-cover {
+	background-size: cover;
+}
 .bg-clip-text {
 	-webkit-background-clip: text;
 	        background-clip: text;
+}
+.bg-center {
+	background-position: center;
+}
+.bg-no-repeat {
+	background-repeat: no-repeat;
 }
 .fill-current {
 	fill: currentColor;
@@ -1737,6 +1752,12 @@ select {
 }
 .pt-8 {
 	padding-top: 2rem;
+}
+.pt-20 {
+	padding-top: 5rem;
+}
+.text-left {
+	text-align: left;
 }
 .text-center {
 	text-align: center;
@@ -2434,11 +2455,6 @@ select {
 	.md\:my-0 {
 		margin-top: 0px;
 		margin-bottom: 0px;
-	}
-
-	.md\:my-2 {
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
 	}
 
 	.md\:mt-0 {

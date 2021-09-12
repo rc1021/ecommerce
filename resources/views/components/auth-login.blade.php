@@ -18,21 +18,19 @@
             </div>
 
             <div class="mt-4">
-                <div class="flex items-center justify-between">
-                    <label for="password" class="block text-sm text-gray-800 dark:text-gray-200">{{ __('Password') }}</label>
-                    @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="text-xs text-gray-600 dark:text-gray-400 hover:underline">{{ __('Forgot Your Password?') }}</a>
-                    @endif
-                </div>
-
+                <label for="password" class="block text-sm text-gray-800 dark:text-gray-200">{{ __('Password') }}</label>
                 <input type="password" name="password" required autocomplete="current-password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
             </div>
 
-            <div class="mt-6">
+            <div class="flex flex-col gap-3 items-center mt-6">
                 <button
                     class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
                     {{ __('Log in') }}
                 </button>
+
+                @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}" class="text-xs text-gray-600 dark:text-gray-400 hover:underline">{{ __('Forgot Your Password?') }}</a>
+                @endif
             </div>
         </form>
 
