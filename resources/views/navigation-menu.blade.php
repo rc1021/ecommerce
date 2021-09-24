@@ -1,5 +1,5 @@
-<nav class="absolute top-0 min-w-full bg-white shadow dark:bg-gray-800 ">
-    <div x-data="{ recovery: false }" class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+<nav class="z-10 absolute top-0 min-w-full bg-white shadow dark:bg-gray-800 ">
+    <div x-data="{ recovery: false }" class="md:container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div class="flex items-center justify-between">
             <div>
                 <a class="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="/">Brand</a>
@@ -14,7 +14,7 @@
                         <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
                     </svg>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        x-show="recovery">
+                        x-show="recovery" style="display: none;">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -22,7 +22,7 @@
         </div>
 
         <!-- Mobile Menu open: "hidden", Menu closed: "block" -->
-        <div x-show="recovery" class="items-center flex md:hidden">
+        <div x-show="recovery" class="items-center flex md:hidden" style="display: none;">
             <div class="flex flex-col flex-grow divide-y md:flex-row md:mx-6">
                 <a class="my-1 pt-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400" href="#">首頁</a>
                 <a class="my-1 pt-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400" href="#">好物推薦</a>
