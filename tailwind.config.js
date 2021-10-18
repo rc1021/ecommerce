@@ -12,6 +12,10 @@ module.exports = {
 
     theme: {
         extend: {
+            translate: {
+                '102': '36rem',
+                '-102': '-36rem',
+            },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
@@ -33,16 +37,19 @@ module.exports = {
                 '4/6': '66.6%',
                 '5/6': '83.3%',
             },
+            zIndex: {
+                '-10': '-10',
+            },
             margin: {
-             '1/2': '50%',
+                '1/2': '50%',
             },
             minHeight: {
-             '0': '0',
-             '100': '28rem',
-             '1/4': '25%',
-             '1/2': '50%',
-             '3/4': '75%',
-             'full': '100%',
+                '0': '0',
+                '100': '28rem',
+                '1/4': '25%',
+                '1/2': '50%',
+                '3/4': '75%',
+                'full': '100%',
             },
             animation: {
                 line_to_full: 'line_to_full 1s ease-in-out both',
@@ -66,7 +73,14 @@ module.exports = {
 
     variants: {
         extend: {
-
+            flexGrow: ['responsive', 'hover'],
+            boxShadow: ['responsive', 'hover', 'active'],
+            display: ["group-hover"],
+            opacity: ['responsive', 'hover', 'active'],
+            ringWidth: ['responsive', 'hover'],
+            zIndex: ['responsive', 'hover'],
+            blur: ['responsive', 'hover'],
+            visibility: ['responsive', 'hover']
         }
     },
 
@@ -74,11 +88,11 @@ module.exports = {
         require('@tailwindcss/aspect-ratio'),
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
-        require('daisyui'),
+        require('daisyui')
     ],
 
     daisyui: {
-      styled: false,
+      styled: true,
       themes: false,
       base: true,
       utils: true,

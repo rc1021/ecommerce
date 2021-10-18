@@ -15,6 +15,11 @@
 
         @livewireStyles
         @stack('styles')
+        <style>
+            [class~=md\:container] {
+                max-width: 1200px;
+            }
+        </style>
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
